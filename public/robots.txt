@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /search
+Allow: /
+
+# Sitemap
+Sitemap: https://sarah-igwe.vercel.app/sitemap.xml
