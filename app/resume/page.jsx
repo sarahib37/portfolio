@@ -7,36 +7,36 @@ import { motion } from 'framer-motion'
 import { FaCss3, FaFigma, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa"
 import { SiChakraui, SiExpress, SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si"
 
-const about = {
-  title: 'About me',
-  description: 'A brief introduction of who I am.',
-  info: [
-    {
-      fieldName: 'Name',
-      fieldValue: 'Sarah Igwe'
-    },
-    {
-      fieldName: 'Experience',
-      fieldValue: '2+ Years'
-    },
-    {
-      fieldName: 'Nationality',
-      fieldValue: 'Nigeria'
-    },
-    {
-      fieldName: 'Soft Skills',
-      fieldValue: 'Communication skills, Teamwork and Collaboration, Problem-Soving, Adaptability, Creativity and Innovation, Attention to Detail, and Stress Management'
-    },
-    {
-      fieldName: 'Hobbies',
-      fieldValue: 'Writing, Exercising, Volunteering, Reading, and Chess'
-    },
-    {
-      fieldName: 'Language(s)',
-      fieldValue: 'English'
-    },
-  ]
-}
+// const about = {
+//   title: 'About me',
+//   description: 'A brief introduction of who I am.',
+//   info: [
+//     {
+//       fieldName: 'Name',
+//       fieldValue: 'Sarah Igwe'
+//     },
+//     {
+//       fieldName: 'Experience',
+//       fieldValue: '2+ Years'
+//     },
+//     {
+//       fieldName: 'Nationality',
+//       fieldValue: 'Nigeria'
+//     },
+//     {
+//       fieldName: 'Soft Skills',
+//       fieldValue: 'Communication skills, Teamwork and Collaboration, Problem-Soving, Adaptability, Creativity and Innovation, Attention to Detail, and Stress Management'
+//     },
+//     {
+//       fieldName: 'Hobbies',
+//       fieldValue: 'Writing, Exercising, Volunteering, Reading, and Chess'
+//     },
+//     {
+//       fieldName: 'Language(s)',
+//       fieldValue: 'English'
+//     },
+//   ]
+// }
 
 // The experience section has some personal projects, but same experience boilerplate
 const experience = {
@@ -228,16 +228,11 @@ const Resume = () => {
 
               <TabsContent value='about' className='w-full text-center xl:text-left'>
                 <div className="flex flex-col gap-[30px]">
-                  <h3 className="text-4xl font-bold">{about.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                    {about.info.map((about, index) => {return(
-                      <li key={index} className="flex flex-col  items-center xl:items-start justify-center xl:justify-start gap-4">
-                        <span className="text-white/60">{about.fieldName}</span>
-                        <span className="text-xl">{about.fieldValue}</span>
-                      </li>
-                    )})}
-                  </ul>
+                  <h3 className="text-4xl font-bold">About me</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">A brief introduction of who I am.</p>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    I am Sarah Igwe-Benson, a versatile Full Stack Website Developer and Media Production Specialist with a passion for creating seamless digital experiences. With expertise in front-end technologies like React and TypeScript, combined with hands-on experience in live production systems using OBS Studio and Atem Mini Pro, I thrive at the intersection of tech and media. Whether building dynamic web applicatons or orchestrating live broadcasts, I bring creativity, technical knowledge, and collaborative energy to every project. Let's create something extraordinary together.
+                  </p>
                 </div>
               </TabsContent>
             </div>
