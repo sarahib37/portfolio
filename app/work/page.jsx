@@ -66,7 +66,7 @@ const Work = () => {
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {return(
-                  <li key={index} className="text-sm text-accent max-w-full break-words">
+                  <li key={index} className="text-xs md:text-sm text-accent max-w-full break-words">
                     {item.name} {index !== project.stack.length -1 && ","}
                   </li>
                 )})}
