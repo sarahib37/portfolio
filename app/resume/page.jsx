@@ -38,12 +38,17 @@ const about = {
   ]
 }
 
+// The experience section has some personal projects, but same experience boilerplate
 const experience = {
   icon: '',
   title: 'My experience',
   description: 'Highlighting my professional journey, this section showcases my roles, responsibilities, and accomplishments in the field, demostrating my growth and expertise.',
   items: [
-    
+    {
+      duration: '2024',
+      position: 'HCLERALD Replicate',
+      company: 'Frontend Developer'
+    },
   ]
 }
 
