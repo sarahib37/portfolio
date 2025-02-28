@@ -45,10 +45,20 @@ const experience = {
   description: 'Highlighting my professional journey, this section showcases my roles, responsibilities, and accomplishments in the field, demostrating my growth and expertise.',
   items: [
     {
-      duration: '2024',
-      position: 'HCLERALD Replicate',
-      company: 'Frontend Developer'
+      duration: '2025',
+      company: 'HCLERALD',
+      position: 'Fullstack Developer'
     },
+    {
+      duration: '2024',
+      company: 'Celestia Replicate',
+      position: 'Frontend Developer'
+    },
+    {
+      duration: '2024',
+      company: 'Retail Auto',
+      position: 'Frontend Developer'
+    }
   ]
 }
 
