@@ -16,31 +16,21 @@ const about = {
       fieldValue: 'Sarah Igwe'
     },
     {
-      fieldName: 'Phone',
-      fieldValue: '(+234) 906 4999 489'
-    },
-    {
       fieldName: 'Experience',
-      fieldValue: '3+ Years'
+      fieldValue: '2+ Years'
     },
     {
       fieldName: 'Nationality',
       fieldValue: 'Nigeria'
     },
     {
-      fieldName: 'Email',
-      fieldValue: 'sarahigwe156@gmail.com'
+      fieldName: 'Soft Skills',
+      fieldValue: 'Communication skills, Teamwork and Collaboration, Problem-Soving, Adaptability, Creativity and Innovation, Attention to Detail, and Stress Management'
     },
     {
-      fieldName: '',
-      fieldValue: ''
+      fieldName: 'Hobbies',
+      fieldValue: 'Writing, Exercising, Volunteering, Reading, and Chess'
     },
-    {
-      fieldName: 'Freelance',
-      fieldValue: 'Available'
-    },
-    
-    
     {
       fieldName: 'Language(s)',
       fieldValue: 'English'
