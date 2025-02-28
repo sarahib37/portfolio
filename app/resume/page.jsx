@@ -230,7 +230,7 @@ const Resume = () => {
                 <div className="flex flex-col gap-[30px]">
                   <h3 className="text-4xl font-bold">About me</h3>
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">A brief introduction of who I am.</p>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
                     I am Sarah Igwe-Benson, a versatile Full Stack Website Developer and Media Production Specialist with a passion for creating seamless digital experiences. With expertise in front-end technologies like React and TypeScript, combined with hands-on experience in live production systems using OBS Studio and Atem Mini Pro, I thrive at the intersection of tech and media. Whether building dynamic web applicatons or orchestrating live broadcasts, I bring creativity, technical knowledge, and collaborative energy to every project. Let's create something extraordinary together.
                   </p>
                 </div>
