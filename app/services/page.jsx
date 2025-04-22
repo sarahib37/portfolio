@@ -7,23 +7,23 @@ import {BsArrowDownRight} from 'react-icons/bs'
 const services = [
   {
     num: '01',
-    title: 'Website Development',
-    description: 'I specialize in building interactive websites that works on all devices (mobile, tablet, and desktop).',
+    title: 'Full-Stack Website Development',
+    description: "I craft custom, responsive websites from start to finish - building clean front-end interfaces and integrating powerful back-end functionality. Whether it's a marketing site, business platform, or a scalable web app, I use modern technologies to deliver high-performance, user-focused solutions that align with your goals.",
   },
   {
     num: '02',
-    title: 'UI/UX Design',
-    description: 'I create intuitive and visually appealing interfaces for web and mobile applications.',
+    title: 'User Experience Design',
+    description: "I prioritize user clarity and ease at every step of the journey. From intuitive layouts to mobile responsiveness, I design seamless experiences that keep your audience engaged and coming back. My focus is on usability, accessibility, and making your product feel effortless to use - without overcomplicating the design.",
   },
   {
     num: '03',
-    title: 'Full-Stack Web Development',
-    description: 'I offer fully functional web applications with smooth user interactions and robust back-end performance.',
+    title: 'Business-Focused Web Strategy',
+    description: "Every project starts with understanding your business. I help align your website goals with your brand identity and user expectations. From competitor analysis to recommending the right tech stack or conversion strategies, I ensure your site is not just functional - but impactful and growth-oriented.",
   },
   {
     num: '04',
-    title: 'Landing Page Design and Development',
-    description: 'I provide high-converting landing pages that are visually striking, fast-loading, and optimized for lead generation and sales. ',
+    title: 'Post-Launch Maintenance & Support',
+    description: "Your website doesn't end at launch - and neither does my support. I provide ongoing maintenance, updates, and troubleshooting to keep your platform running smoothly. Whether it's performance tuning, bug fixes, or content updates, I ensure your site stays secure and future-proof.",
   }
 ]
 
