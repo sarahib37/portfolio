@@ -4,41 +4,14 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { motion } from 'framer-motion'
-import { FaCss3, FaFigma, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa"
+import { FaBrain, FaCss3, FaFigma, FaHtml5, FaJs, FaNodeJs, FaReact, FaUsers } from "react-icons/fa"
 import { SiChakraui, SiExpress, SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si"
+import { BiConversation } from 'react-icons/bi'
+import { TbArrowsShuffle, TbPuzzle } from 'react-icons/tb'
+import { AiOutlineClockCircle } from 'react-icons/ai'
+import { MdOutlineDraw } from 'react-icons/md'
+import {RiTeamLine} from 'react-icons/ri'
 
-// const about = {
-//   title: 'About me',
-//   description: 'A brief introduction of who I am.',
-//   info: [
-//     {
-//       fieldName: 'Name',
-//       fieldValue: 'Sarah Igwe'
-//     },
-//     {
-//       fieldName: 'Experience',
-//       fieldValue: '2+ Years'
-//     },
-//     {
-//       fieldName: 'Nationality',
-//       fieldValue: 'Nigeria'
-//     },
-//     {
-//       fieldName: 'Soft Skills',
-//       fieldValue: 'Communication skills, Teamwork and Collaboration, Problem-Soving, Adaptability, Creativity and Innovation, Attention to Detail, and Stress Management'
-//     },
-//     {
-//       fieldName: 'Hobbies',
-//       fieldValue: 'Writing, Exercising, Volunteering, Reading, and Chess'
-//     },
-//     {
-//       fieldName: 'Language(s)',
-//       fieldValue: 'English'
-//     },
-//   ]
-// }
-
-// The experience section has some personal projects, but same experience boilerplate
 const experience = {
   icon: '',
   title: 'My experience',
@@ -47,17 +20,20 @@ const experience = {
     {
       duration: '2025',
       company: 'HCLERALD',
-      position: 'Fullstack Developer'
+      position: 'Fullstack Developer',
+      description: "Built a full-stack e-commerce website with a quote submission feature and an admin approval workflow."
     },
     {
       duration: '2024',
       company: 'Celestia Replicate',
-      position: 'Frontend Developer'
+      position: 'Frontend Developer',
+      description: 'Recreated 10 pages of the Celestia website with pixel-perfect fidelity and responsive design.'
     },
     {
       duration: '2024',
       company: 'Retail Auto',
-      position: 'Frontend Developer'
+      position: 'Frontend Developer',
+      description: 'Developed a car search and wishlist app by integrating a third-party car listings API.'
     }
   ]
 }
@@ -138,6 +114,40 @@ const skills = {
       icon: <FaFigma/>,
       name: "Figma"
     },
+  ],
+  softSkillList: [
+    {
+      icon: <BiConversation/>,
+      name: "Communication"
+    },
+    {
+      icon: <TbPuzzle/>,
+      name: "Problem Solving"
+    },
+    {
+      icon: <FaUsers/>,
+      name: "Team Collaboration"
+    },
+    {
+      icon: <AiOutlineClockCircle/>,
+      name: "Time Management"
+    },
+    {
+      icon: <TbArrowsShuffle/>,
+      name: "Adaptability"
+    },
+    {
+      icon: <FaBrain/>,
+      name: "Critical Thinking"
+    },
+    {
+      icon: <RiTeamLine/>,
+      name: "Leadership"
+    },
+    {
+      icon: <MdOutlineDraw/>,
+      name: "Creativity"
+    },
   ]
 }
 
@@ -197,9 +207,10 @@ const Resume = () => {
                   <ScrollArea className='h-[400px]'>
                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                       {experience.items.map((item, index) => {
-                        return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex  flex-col justify-center items-center lg:items-start gap-1">
+                        return <li key={index} className="bg-[#232329] h-[auto] py-6 px-10 rounded-xl flex  flex-col justify-center items-center lg:items-start gap-1">
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[68px] text-center lg:text-left">{item.position}</h3>
+                          <p className="text-center lg:text-left">{item.description}</p>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.company}</p>
@@ -216,24 +227,46 @@ const Resume = () => {
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-wp[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
                 </div>
+                
+                <ScrollArea className='h-[400px]'>
+                  <h4 className="text-2xl font-bold my-[1em]">Hard Skills</h4>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                    {skills.skillList.map((skill, index) => {
+                      return <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group" >
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">    {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>  
+                        </TooltipProvider>  
+                      </li>
+                    })}
+                  </ul>
 
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index) => {
-                    return <li key={index}>
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group" >
-                            <div className="text-6xl group-hover:text-accent transition-all duration-300">    {skill.icon}
-                            </div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
-                          </TooltipContent>
-                        </Tooltip>  
-                      </TooltipProvider>  
-                    </li>
-                  })}
-                </ul>
+                  <h4 className="text-2xl font-bold my-[1em]">Soft Skills</h4>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                    {skills.softSkillList.map((skill, index) => {
+                      return <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group" >
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">    {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>  
+                        </TooltipProvider>  
+                      </li>
+                    })}
+                  </ul>
+                </ScrollArea>
               </TabsContent>
 
             </div>
