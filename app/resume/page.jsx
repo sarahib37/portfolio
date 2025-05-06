@@ -159,24 +159,13 @@ const Resume = () => {
             </TabsList>
 
             <div className="min-h-[70vh] w-full">
-              <TabsContent value='experience' className='w-full'>
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{experience.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-                  <ScrollArea className='h-[400px]'>
-                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                      {experience.items.map((item, index) => {
-                        return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex  flex-col justify-center items-center lg:items-start gap-1">
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[68px] text-center lg:text-left">{item.position}</h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      })}
-                    </ul>
-                  </ScrollArea>
+              <TabsContent value='about' className='w-full text-center xl:text-left'>
+                <div className="flex flex-col gap-[30px]">
+                  <h3 className="text-4xl font-bold">About me</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 font-semibold">A brief introduction of who I am.</p>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
+                    I am Sarah Igwe-Benson, a versatile Full Stack Website Developer and Media Production Specialist with a passion for creating seamless digital experiences. <br/> <br/>With expertise in front-end technologies like React and TypeScript, combined with hands-on experience in live production systems using OBS Studio and Atem Mini Pro, I thrive at the intersection of tech and media. <br/> <br/>Whether building dynamic web applicatons or orchestrating live broadcasts, I bring creativity, technical knowledge, and collaborative energy to every project. <br/> <br/>Let's create something extraordinary together.
+                  </p>
                 </div>
               </TabsContent>
 
@@ -198,6 +187,27 @@ const Resume = () => {
                         })}
                       </ul>
                     </ScrollArea>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value='experience' className='w-full'>
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{experience.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
+                  <ScrollArea className='h-[400px]'>
+                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                      {experience.items.map((item, index) => {
+                        return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex  flex-col justify-center items-center lg:items-start gap-1">
+                          <span className="text-accent">{item.duration}</span>
+                          <h3 className="text-xl max-w-[260px] min-h-[68px] text-center lg:text-left">{item.position}</h3>
+                          <div className="flex items-center gap-3">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p className="text-white/60">{item.company}</p>
+                          </div>
+                        </li>
+                      })}
+                    </ul>
+                  </ScrollArea>
                 </div>
               </TabsContent>
 
@@ -226,15 +236,6 @@ const Resume = () => {
                 </ul>
               </TabsContent>
 
-              <TabsContent value='about' className='w-full text-center xl:text-left'>
-                <div className="flex flex-col gap-[30px]">
-                  <h3 className="text-4xl font-bold">About me</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 font-semibold">A brief introduction of who I am.</p>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
-                    I am Sarah Igwe-Benson, a versatile Full Stack Website Developer and Media Production Specialist with a passion for creating seamless digital experiences. <br/> <br/>With expertise in front-end technologies like React and TypeScript, combined with hands-on experience in live production systems using OBS Studio and Atem Mini Pro, I thrive at the intersection of tech and media. <br/> <br/>Whether building dynamic web applicatons or orchestrating live broadcasts, I bring creativity, technical knowledge, and collaborative energy to every project. <br/> <br/>Let's create something extraordinary together.
-                  </p>
-                </div>
-              </TabsContent>
             </div>
           </Tabs>
         </div>
